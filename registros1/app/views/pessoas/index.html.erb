@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Endereço</th>
+    <th>idade</th>
+  </tr>
+<% @pessoas.each do |pessoa| %>
+  <tr>
+    <td><%= pessoa.nome          %></td>
+    <td><%= pessoa.endereco      %></td>
+    <td><%= pessoa.idade         %></td>
+    <td>
+      <%= link_to 'Mostrar', action: 'show', id: pessoa %>
+    </td>
+    <td>
+      <%= link_to 'Editar', action: 'edit', id: pessoa %>
+    </td>
+    <td>
+  <%= link_to 'Deletar', {action: 'destroy', id: pessoa},
+                         {method: "delete"}  %>
+</td>
+  </tr>
+
+<% end %>
+</table>
+<!-- lista de restaurantes -->
+
+<br/>
+<%= link_to 'Novo', action: 'new' %>

@@ -1,0 +1,8 @@
+<%= form_for @pessoa do |f| %>
+  Nome: <%= f.text_field :nome %><br/>
+  Endereço: <%= f.text_field :endereco %><br/>
+  idade: <%= f.text_field :idade %><br/>
+  sexo: <%= f.text_field :sexo %><br/>
+
+  <%= f.submit %>
+<% end %>
